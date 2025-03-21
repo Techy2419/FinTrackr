@@ -1,0 +1,236 @@
+/* 🌞 Light Mode (Will be added later) */
+:root {
+  /* 🔹 Background & Text */
+  --background: rgb(255, 255, 255); /* Main background (white) */
+  --foreground: rgb(10, 10, 10); /* Main text color (black) */
+
+  /* 🔹 Cards (Boxes, Sections) */
+  --card: rgb(255, 255, 255); /* Card background (white) */
+  --card-foreground: rgb(10, 10, 10); /* Card text color (black) */
+
+  /* 🔹 Buttons */
+  --primary: rgb(23, 23, 23); /* Main buttons (dark gray) */
+  --primary-foreground: rgb(
+    250,
+    250,
+    250
+  ); /* Text inside primary buttons (white) */
+
+  --secondary: rgb(245, 245, 245); /* Secondary buttons (light gray) */
+  --secondary-foreground: rgb(
+    23,
+    23,
+    23
+  ); /* Text inside secondary buttons (dark) */
+
+  /* 🔹 Extra (Borders, Inputs, Muted Text) */
+  --muted: rgb(245, 245, 245); /* Muted elements (subtle backgrounds) */
+  --muted-foreground: rgb(115, 115, 115); /* Muted text (light gray) */
+  --border: rgb(229, 229, 229); /* Borders, input fields */
+  --input: rgb(229, 229, 229); /* Input field border */
+}
+
+/* 🌙 Dark Mode (DEFAULT) */
+.dark {
+  /* 🔹 Background & Text */
+  --background: linear-gradient(
+    to bottom,
+    rgb(10, 10, 10),
+    rgb(38, 38, 38)
+  ); /* Gradient Background */
+  --foreground: rgb(250, 250, 250); /* Main text color (white) */
+
+  /* 🔹 Cards (Boxes, Sections) */
+  --card: rgb(10, 10, 10); /* Card background (dark) */
+  --card-foreground: rgb(250, 250, 250); /* Card text color (white) */
+
+  /* 🔹 Buttons */
+  --primary: rgb(250, 250, 250); /* Main buttons (white) */
+  --primary-foreground: rgb(
+    23,
+    23,
+    23
+  ); /* Text inside primary buttons (black) */
+
+  --secondary: rgb(38, 38, 38); /* Secondary buttons (dark gray) */
+  --secondary-foreground: rgb(
+    250,
+    250,
+    250
+  ); /* Text inside secondary buttons (white) */
+
+  /* 🔹 Extra (Borders, Inputs, Muted Text) */
+  --muted: rgb(38, 38, 38); /* Muted elements (dark gray) */
+  --muted-foreground: rgb(163, 163, 163); /* Muted text (lighter gray) */
+  --border: rgb(38, 38, 38); /* Borders, input fields */
+  --input: rgb(38, 38, 38); /* Input field border */
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("SpaceGrotesk-Medium.woff2") format("woff2"),
+    url("SpaceGrotesk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("SpaceGrotesk-Bold.woff2") format("woff2"),
+    url("SpaceGrotesk-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("SpaceGrotesk-Light.woff2") format("woff2"),
+    url("SpaceGrotesk-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("SpaceGrotesk-Regular.woff2") format("woff2"),
+    url("SpaceGrotesk-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("SpaceGrotesk-SemiBold.woff2") format("woff2"),
+    url("SpaceGrotesk-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway-Bold.woff2") format("woff2"),
+    url("Raleway-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway-Light.woff2") format("woff2"),
+    url("Raleway-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway-Medium.woff2") format("woff2"),
+    url("Raleway-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway-Regular.woff2") format("woff2"),
+    url("Raleway-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("Raleway-SemiBold.woff2") format("woff2"),
+    url("Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#hero-section {
+  color: var(--foreground);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero-title {
+  color: var(--foreground);
+  font-size: 40px;
+  font-weight: bold;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.tagline {
+  color: var(--muted-foreground);
+  font-size: 18px;
+  font-style: italic;
+  padding: 5px;
+}
+
+/* BUTTONS */
+.container {
+  padding-bottom: 20px;
+}
+
+/* Skills Section*/
+.skill-card {
+  font-family: "FS Me";
+  border: none;
+  background-color: var(--card);
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  color: var(--foreground);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-text {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.mb-4 {
+  font-family: "CoFo Sans";
+  font-weight: bold;
+}
+
+.text-body {
+  font-family: "FS Me";
+}

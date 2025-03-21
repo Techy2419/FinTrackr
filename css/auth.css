@@ -1,0 +1,317 @@
+/* 🌞 Light Mode (Will be added later) */
+:root {
+  /* 🔹 Background & Text */
+  --background: rgb(255, 255, 255); /* Main background (white) */
+  --foreground: rgb(10, 10, 10); /* Main text color (black) */
+
+  /* 🔹 Cards (Boxes, Sections) */
+  --card: rgb(255, 255, 255); /* Card background (white) */
+  --card-foreground: rgb(10, 10, 10); /* Card text color (black) */
+
+  /* 🔹 Buttons */
+  --primary: rgb(23, 23, 23); /* Main buttons (dark gray) */
+  --primary-foreground: rgb(
+    250,
+    250,
+    250
+  ); /* Text inside primary buttons (white) */
+
+  --secondary: rgb(245, 245, 245); /* Secondary buttons (light gray) */
+  --secondary-foreground: rgb(
+    23,
+    23,
+    23
+  ); /* Text inside secondary buttons (dark) */
+
+  /* 🔹 Extra (Borders, Inputs, Muted Text) */
+  --muted: rgb(245, 245, 245); /* Muted elements (subtle backgrounds) */
+  --muted-foreground: rgb(115, 115, 115); /* Muted text (light gray) */
+  --border: rgb(229, 229, 229); /* Borders, input fields */
+  --input: rgb(229, 229, 229); /* Input field border */
+}
+
+/* 🌙 Dark Mode (DEFAULT) */
+.dark {
+  /* 🔹 Background & Text */
+  --background: linear-gradient(
+    to bottom,
+    rgb(10, 10, 10),
+    rgb(38, 38, 38)
+  ); /* Gradient Background */
+  --foreground: rgb(250, 250, 250); /* Main text color (white) */
+
+  /* 🔹 Cards (Boxes, Sections) */
+  --card: rgb(10, 10, 10); /* Card background (dark) */
+  --card-foreground: rgb(250, 250, 250); /* Card text color (white) */
+
+  /* 🔹 Buttons */
+  --primary: rgb(250, 250, 250); /* Main buttons (white) */
+  --primary-foreground: rgb(
+    23,
+    23,
+    23
+  ); /* Text inside primary buttons (black) */
+
+  --secondary: rgb(38, 38, 38); /* Secondary buttons (dark gray) */
+  --secondary-foreground: rgb(
+    250,
+    250,
+    250
+  ); /* Text inside secondary buttons (white) */
+
+  /* 🔹 Extra (Borders, Inputs, Muted Text) */
+  --muted: rgb(38, 38, 38); /* Muted elements (dark gray) */
+  --muted-foreground: rgb(163, 163, 163); /* Muted text (lighter gray) */
+  --border: rgb(38, 38, 38); /* Borders, input fields */
+  --input: rgb(38, 38, 38); /* Input field border */
+}
+
+/* FONTS */
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Medium.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Bold.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Light.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-Regular.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-SemiBold.woff2") format("woff2"),
+    url("../fonts/SpaceGrotesk-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Bold.woff2") format("woff2"),
+    url("../fonts/Raleway-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/aleway-Light.woff2") format("woff2"),
+    url("../fonts/Raleway-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2"),
+    url("../fonts/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.woff") format("woff2"),
+    url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-SemiBold.woff2") format("woff2"),
+    url("../fonts/Raleway-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Center the Sign-Up Section */
+#signup-section {
+  font-family: "Raleway";
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px; /* Adds spacing on small screens */
+}
+
+/* ✅ Ensure the card is fully responsive */
+.card {
+  font-size: 14px !important;
+  border: none;
+  background-color: var(--card);
+  color: var(--foreground);
+  padding: 12px;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 450px; /* Prevents it from being too wide */
+  border-radius: 10px !important;
+  border: 1px solid var(--secondary) !important;
+}
+
+/* Fix for all text inside the sign-up card */
+.signup-card,
+.signup-card * {
+  font-weight: 500 !important; /* Force apply normal weight */
+}
+
+/* ✅ Center the form inputs properly */
+form {
+  width: 100%;
+}
+
+/* ✅ Customize input field border & background color */
+.form-control {
+  border: 0.5px solid var(--secondary) !important; /* Custom border color */
+  background-color: var(--input-bg) !important; /* Custom input background */
+  color: var(--foreground) !important; /* Text color inside input */
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px; /* Rounded edges */
+  transition: all 0.3s ease-in-out;
+}
+
+.form-control:not(:last-child) {
+  margin-bottom: 6px; /* Reduce vertical spacing */
+}
+
+/* ✅ Change Input Border on Focus */
+.form-control:focus {
+  border-color: var(--primary) !important; /* Highlighted border color */
+  background-color: var(
+    --card
+  ) !important; /* Slightly darker input background */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ Placeholder Text Color */
+::placeholder {
+  color: var(--muted-foreground) !important;
+  opacity: 0.7;
+}
+
+/* Spacing for First Name & Last Name */
+.row .col-md-6 {
+  margin-bottom: 15px;
+}
+
+/* show password icon */
+.show-password {
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--muted-foreground);
+  text-align: center;
+  transform: translateY(-15) !important;
+}
+
+/* Forgot Password Link */
+a {
+  color: var(--foreground);
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  font-size: 12px;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* Sign In Link Styling */
+.text-muted {
+  color: var(--foreground) !important;
+}
+
+.signup-link a {
+  font-size: 14px !important;
+  color: var(--foreground);
+  transition: color 0.3s ease-in-out;
+}
+
+.signup-link a:hover {
+  color: var(--foreground);
+}
+
+/* OR Sign Up With Text */
+.or-text {
+  display: block;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--muted-foreground);
+  margin-bottom: 10px;
+}
+
+/* Social Auth Buttons */
+.btn-outline-light {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.btn-outline-light:hover {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.mb-4 {
+  font-family: "Raleway";
+  font-weight: bold;
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 10px !important; /* Adjust to desired spacing */
+}
+
+.signup-subtext {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--muted-foreground);
+  opacity: 0.85;
+  text-align: center;
+  margin-top: -2px !important; /* Pulls subtext closer to title */
+}
